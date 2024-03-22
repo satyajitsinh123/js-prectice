@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="myform">
+            <div class="form-group">
+                <label for="name" id="one">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <input type="submit" />
+        </form>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
+<script>
+    let name = document.getElementById("name");
+    let lable = document.getElementById("one");
+
+    document.getElementById("myform").addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (name.value == "") {
+            // alert("please fill name");
+            lable.style.color = "red"
+        } else {
+            console.log("submitted");
+        }
+    });
+
+
+</script>
