@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="main"></div>
+    </main>
+</body>
+
+</html>
+<script>
+    let data = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log(data);
+    let mainDiv = document.getElementById("main");
+    data.foreach(function (el, ind) {
+
+        let div = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.image;
+
+        let h4 = document.createElement("h4");
+        h4.innerText = el.title;
+
+        let p = document.createElement("p");
+        p.innerText = el.price;
+
+        div.append(img,h4,p);
+
+        mainDiv.append(div);
+
+
+
+    });
+</script>
