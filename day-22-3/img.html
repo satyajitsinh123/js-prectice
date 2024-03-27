@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="hello">
+
+    </div>
+</body>
+
+</html>
+<script>
+    let div = document.getElementById("hello");
+    for (let i = 0; i <= 5; i++) {
+        let img = document.createElement("img");
+        img.style.borderRadius = "10px";
+        img.style.height = "100px";
+        img.style.width = "100px"
+        let h3 = document.createElement("h3");
+        h3.innerText = "Horse"
+        img.src = "https://images.pexels.com/photos/20582013/pexels-photo-20582013/free-photo-of-white-horses-grazing-green-grass-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load";
+        div.append(img, h3);
+    }
+</script>
